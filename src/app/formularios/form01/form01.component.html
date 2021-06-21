@@ -1,0 +1,24 @@
+<h2>User details</h2>
+<form #form01="ngForm" (ngSubmit)="sendData(username, userpass)">
+  <mat-form-field appearance="fill">
+    <mat-label>Username</mat-label>
+    <input matInput [placeholder]="placeholders.username" #username>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput [placeholder]="placeholders.password" #userpass >
+  </mat-form-field>
+  <button class="submit-btn"
+          color="primary"
+          mat-raised-button
+          type="submit"
+          #sendButton>
+    Aceptar
+  </button>
+</form>
+
+
+<p *ngIf="message==''"><span>{{userName}}</span><span>{{userPassword}}</span></p>
+{{message}}
+
